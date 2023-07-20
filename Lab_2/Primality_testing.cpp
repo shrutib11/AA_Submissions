@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -12,10 +12,14 @@ long int gcd(long int a, long int b){
 	return a;
 }
 
-long int power(long int x, long long int y, long long int n){
+long long int power(long int a, long long int x, long long int n){
 	long long int res = 1;
-	for(int i = 1; i <= y; i++){
-    	res = (res * x) % n;
+	while(x > 0){
+		if(x % 2 == 1){
+			res = (res * a) % n;
+		}
+		x = x / 2;
+		a = (a * a) % n;
 	}
 	return res;
 }
