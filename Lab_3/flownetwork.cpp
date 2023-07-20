@@ -99,7 +99,6 @@ int main()
    	 
     	graph[u][v]= max_capacity;
 	}
-    
 	cout << "max flow is : " << ford_fulkerson(graph, 0, N-1, N);
 
 	return 0;
