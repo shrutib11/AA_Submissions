@@ -23,22 +23,22 @@ int direction(struct Point p1, struct Point p2, struct Point p3){
 	return ans;
 }
 
- bool segmentIntersect(struct Point P1, struct Point P2, struct Point P3, struct Point P4){
-    	int d1 = direction(P3, P4, P1);
-    	cout << d1 << endl;
-    	int d2 = direction(P3, P4, P2);
-    	cout << d2 << endl;
-    	int d3 = direction(P1, P2, P3);
-    	cout << d3 << endl;
-    	int d4 = direction(P1, P2, P4);
-    	cout << d4 << endl;
-   	 
-    	if((d1 * d2 < 0) && (d3 * d4 < 0)) return true;
-    	else if(d1 == 0 && OnSegment(P3, P4, P1)) return true;
-    	else if(d2 == 0 && OnSegment(P3, P4, P2)) return true;
-    	else if(d3 == 0 && OnSegment(P1, P2, P3)) return true;
-    	else if(d4 == 0 && OnSegment(P1, P2, P4)) return true;
-    	else return false;
+bool segmentIntersect(struct Point P1, struct Point P2, struct Point P3, struct Point P4){
+	int d1 = direction(P3, P4, P1);
+	cout << d1 << endl;
+	int d2 = direction(P3, P4, P2);
+	cout << d2 << endl;
+	int d3 = direction(P1, P2, P3);
+	cout << d3 << endl;
+	int d4 = direction(P1, P2, P4);
+	cout << d4 << endl;
+	
+	if((d1 * d2 < 0) && (d3 * d4 < 0)) return true;
+	else if(d1 == 0 && OnSegment(P3, P4, P1)) return true;
+	else if(d2 == 0 && OnSegment(P3, P4, P2)) return true;
+	else if(d3 == 0 && OnSegment(P1, P2, P3)) return true;
+	else if(d4 == 0 && OnSegment(P1, P2, P4)) return true;
+	else return false;
 }
 
 int main(){

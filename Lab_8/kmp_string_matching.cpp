@@ -22,6 +22,7 @@ void string_matching(string pattern, string text, vector<int>&pie){
 	cout << "Count of matching : " << cnt << endl;
 }
 
+//pre processing
 void compute_prefix(string pattern, vector<int>&pie){
 	int k = 0;
 	int cnt = 0;
